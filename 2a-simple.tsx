@@ -1,8 +1,8 @@
 // @ts-ignore
 import { useCollection } from "@dico/react";
 
-export default function loginForm() {
-  const form = useCollection("form.login", [
+export default function LoginForm() {
+  const loginForm = useCollection("form.login", [
     "emailLabel",
     "emailPlaceholder",
     "passwordLabel",
@@ -12,12 +12,12 @@ export default function loginForm() {
 
   return (
     <form method="POST" action="/login">
-      <label>{form.emailLabel}</label>
-      <input type="email" placeholder={form.emailPlaceholder} />
-      <label>{form.passwordLabel}</label>
-      <input type="password" placeholder={form.passwordPlaceholder} />
+      <label>{loginForm.emailLabel}</label>
+      <input type="email" placeholder={loginForm.emailPlaceholder} />
+      <label>{loginForm.passwordLabel}</label>
+      <input type="password" placeholder={loginForm.passwordPlaceholder} />
 
-      <input type="submit" value={form.submitLabel} />
+      <input type="submit" value={loginForm.submitLabel} />
     </form>
   );
 }

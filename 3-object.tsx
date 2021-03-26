@@ -1,8 +1,8 @@
 // @ts-ignore
 import { useDef } from "@dico/react";
 
-export default function loginForm() {
-  const form = useDef({
+export default function LoginForm() {
+  const loginForm = useDef({
     form: {
       login: [
         { email: ["label", "placeholder" ]},
@@ -15,13 +15,13 @@ export default function loginForm() {
   return (
     <form method="POST" action="/login">
 
-      <label>{ form.email.label }</label>
-      <input type="email" placeholder={ form.email.placeholder } />
-      <label>{ form.passwordLabel }</label>
-      <input type="password" placeholder={ form.password.placeholder } />
+      <label>{ loginForm.email.label }</label>
+      <input type="email" placeholder={ loginForm.email.placeholder } />
+      <label>{ loginForm.passwordLabel }</label>
+      <input type="password" placeholder={ loginForm.password.placeholder } />
 
-      <input type="submit" value={ form.submit.label } />
+      <input type="submit" value={ loginForm.submit.label } />
 
     </form>
-  )
+  );
 }
