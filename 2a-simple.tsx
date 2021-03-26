@@ -7,19 +7,17 @@ export default function loginForm() {
     "emailPlaceholder",
     "passwordLabel",
     "passwordPlaceholder",
-    { name: "submitLabel", maxLength: 30 }
+    { name: "submitLabel", maxLength: 30 },
   ]);
 
   return (
     <form method="POST" action="/login">
+      <label>{form.emailLabel}</label>
+      <input type="email" placeholder={form.emailPlaceholder} />
+      <label>{form.passwordLabel}</label>
+      <input type="password" placeholder={form.passwordPlaceholder} />
 
-      <label>{ form.emailLabel }</label>
-      <input type="email" placeholder={ form.emailPlaceholder } />
-      <label>{ form.passwordLabel }</label>
-      <input type="password" placeholder={ form.passwordPlaceholder } />
-
-      <input type="submit" value={ form.submitLabel } />
-
+      <input type="submit" value={form.submitLabel} />
     </form>
-  )
+  );
 }
