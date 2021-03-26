@@ -2,7 +2,7 @@
 import { useCollection, useKey } from "@dico/react";
 
 export default function LoginForm() {
-  const { email, password, submitLabel } = useCollection("login", [
+  const { email, password, submitLabel } = useCollection("loginForm", [
     useCollection("email", [
       useKey("label"), 
       useKey("placeholder")
