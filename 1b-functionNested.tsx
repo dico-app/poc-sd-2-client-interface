@@ -2,7 +2,7 @@
 import { useCollection, useKey } from "@dico/react";
 
 export default function LoginForm() {
-  const { email, password, submitLabel } = useCollection("loginForm", [
+  const loginForm = useCollection("loginForm", [
     useCollection("email", [
       useKey("label"), 
       useKey("placeholder")
@@ -16,13 +16,13 @@ export default function LoginForm() {
 
   return (
     <form method="POST" action="/login">
-      <label>{email.label}</label>
+      <label>{loginForm.email.label}</label>
 
-      <input type="email" placeholder={email.placeholder} />
-      <label>{password.label}</label>
-      <input type="password" placeholder={password.placeholder} />
+      <input type="email" placeholder={loginForm.email.placeholder} />
+      <label>{loginForm.password.label}</label>
+      <input type="password" placeholder={loginForm.password.placeholder} />
 
-      <input type="submit" value={submitLabel} />
+      <input type="submit" value={loginForm.submitLabel} />
     </form>
   );
 }

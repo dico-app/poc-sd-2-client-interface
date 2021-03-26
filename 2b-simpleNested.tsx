@@ -3,8 +3,14 @@ import { useCollection } from "@dico/react";
 
 export default function loginForm() {
   const form = useCollection("form.login", [
-    useCollection("email", ["label", "placeholder"]),
-    useCollection("password", ["label", "placeholder"]),
+    useCollection("email", [
+      "label", 
+      "placeholder"
+    ]),
+    useCollection("password", [
+      "label", 
+      "placeholder"
+    ]),
     { name: "submitLabel", maxLength: 30 },
   ]);
 
